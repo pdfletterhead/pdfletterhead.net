@@ -1,0 +1,31 @@
+Params:
+  mac_app_store_lite: 'https://itunes.apple.com/app/id976548033?l=en&mt=12'
+  mac_app_store_pro: 'https://itunes.apple.com/app/id1075794517?l=en&mt=12'
+  sub_title: 'Apply your letterhead or logo on letters, quotations, invoices or contracts'
+  twitter_username: pdfletterhead
+baseURL: /
+copyright: Copyright © <span itemprop="brand">Pim Snel</span> 2016. All Rights Reserved
+description: >-
+  PDF Letterhead for macOS converts your PDF file as if it has been printed on
+  letterhead. Free, fast, and easy.
+email: website@pdfletterhead.net
+enableRobotsTXT: true
+html_title: >-
+  PDF Letterhead for macOS - Apply your letterhead or logo on letters,
+  quotations, invoices or contracts
+keywords: >-
+  pdf, letterhead, logo, quotations, freelancer, stationary, business cards,
+  watermark, company, professional, design, writing, paper
+languageCode: en-us
+markup:
+  goldmark:
+    renderer:
+      hardWraps: false
+      unsafe: true
+theme: qp
+title: PDF Letterhead for macOS
+languages:
+  nl:
+    weight: 2
+  en:
+    weight: 1

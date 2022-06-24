@@ -1,0 +1,52 @@
+@include media-query($on-laptop) {
+
+  .features {
+    font-size: 14px;
+
+    td.device {
+      width: auto;
+      height: auto;
+    }
+
+    td.name {
+      padding: 5px;
+    }
+
+    svg {
+      width: 20px;
+    }
+  }
+
+  .intro-header {
+    background: $base-color;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  }
+
+  ul.intro-social-buttons > li {
+    display: inline-block;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .download-button,
+  .app-store-matrix {
+    font-size: 14px;
+    padding: 5px 10px;
+    line-height: normal;
+    margin: 20px 0 0 5px;
+  }
+
+  .feedback {
+    display: none;
+  }
+}

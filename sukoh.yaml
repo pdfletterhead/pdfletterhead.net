@@ -1,0 +1,196 @@
+hugover: "extended_0.76.5"
+serve:
+  - key: default
+    config: config.yaml
+build:
+  - key: default
+    config: config.yaml
+
+menu:
+  - key: paginas
+    title: Pagina's
+    menuItems:
+      - key: form-sent-page
+
+  - key: pagina-elementen
+    title: Pagina Elementen
+    menuItems:
+      - key: voorpagina-elementen
+
+  - key: pages
+    title: Pages
+    menuItems:
+      - key: pages
+
+  - key: Settings
+    title: "Instellingen "
+    menuItems:
+      - key: mainConfig
+      - key: menus
+
+collections:
+
+  - key: voorpagina-elementen
+    title: Voorpagina elementen
+    folder: content/contentblocks/
+    extension: md
+    dataformat: yaml
+    itemtitle: pagina element
+    fields:
+      - key: title
+        title: Title
+        type: string
+      - key: img
+        title: img
+        type: string
+      - key: img_location
+        default: left
+        multiple: false
+        options:
+        - text: left
+          value: left
+        - text: right
+          value: right
+        - text: empty
+          value: none
+        title: img location
+        type: select
+
+      - key: menu_title
+        title: Menu title
+        type: string
+      - key: weight
+        title: Gewicht (lager is hoger in de lijst)
+        type: number
+      - key: mainContent
+        title: Content
+        type: markdown
+
+  - key: pages
+    title: Pages
+    folder: content/pages/
+    extension: md
+    dataformat: yaml
+    itemtitle: Post
+    fields:
+      - key: title
+        title: Title
+        type: string
+      - key: mainContent
+        title: Content
+        type: markdown
+      - key: pubdate
+        title: Pub Date
+        type: date
+        default: now
+      - key: bundle-manager
+        type: bundle-manager
+        path: imgs
+        extensions:
+          - png
+          - jpg
+          - gif
+#        fields:
+          #- key: title
+            #title: Title
+            #type: string
+          #- key: description
+            #title: Description
+            #type: string
+#            multiLine: true
+
+singles:
+  - key: form-sent-page
+    title: form sent page
+    dataformat: yaml
+    file: content/form-sent-page/index.md
+    fields:
+      - key: title
+        title: Titel
+        type: string
+      - key: mainContent
+        title: Tekst
+        type: markdown
+
+  - key: menus
+    title: Menus
+    file: data/menus.yml
+    fields:
+
+      - key: main
+        groupdata: true
+        title: main
+        type: accordion
+        fields:
+          - key: name
+            arrayTitle: true
+            title: name
+            type: string
+          - key: url
+            title: url
+            type: string
+          - key: weight
+            title: weight
+            type: number
+
+  - key: mainConfig
+    title: Main Config
+    file: config.yaml
+    fields:
+      - key: title
+        title: Site Title
+        type: string
+        tip: Your page title.
+      - key: html_title
+        title: html Title
+        type: string
+      - key: copyright
+        title: copyright
+        type: string
+      - key: email
+        title: email
+        type: string
+
+      - key: keywords
+        title: keywords
+        type: string
+        multiLine: true
+
+      - key: description
+        title: Description
+        type: string
+        multiLine: true
+
+      - key: params
+        type: pull
+        group: Params
+        fields:
+        - key: twitter_username
+          title: twitter_username
+          type: string
+        - key: sub_title
+          title: sub_title
+          type: string
+        - key: mac_app_store_pro
+          title: mac_app_store_pro
+          type: string
+        - key: mac_app_store_lite
+          title: mac_app_store_lite
+          type: string
+
+      - key: baseURL
+        title: Base URL
+        type: string
+        tip: Your site URL.
+      - key: theme
+        title: Theme
+        type: readonly
+        tip: The current theme.
+      - key: languageCode
+        title: Language Code
+        type: readonly
+      - key: enableRobotsTXT
+        title: Enable Robots
+        type: boolean
+        default: true
+        tip: If you want you page to be indexed, keep this enabled.

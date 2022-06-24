@@ -1,0 +1,22 @@
+main:
+  - name: About
+    url: '/#About'
+    weight: 10
+  - name: So easy
+    url: '/#It''s so easy'
+    weight: 20
+  - name: Transparency
+    url: '/#Transparency'
+    weight: 30
+  - name: Features
+    url: '/#Features'
+    weight: 40
+  - name: Reviews
+    url: '/#Reviews'
+    weight: 50
+  - name: Press
+    url: '/#Press'
+    weight: 60
+  - name: Support
+    url: '/#contact'
+    weight: 0

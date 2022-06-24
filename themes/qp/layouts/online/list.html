@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {{- partial "online-head.html" . -}}
+
+  <body>
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h1>PDF Letterhead Online <small>adds background to your PDF</small></h1>
+          <a id="startrondleiding" class="tourstart" href="#">Need help? Start the guided tour.</a>
+        </div>
+
+        {{- partial "online-lang-switcher.html" . -}}
+
+      </div>
+    </nav>
+
+    <hr>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="hidden" id="tour-next-title">next</div>
+        <div class="hidden" id="tour-close-title">close</div>
+
+        <div class="hidden" id="tour-step1-title">Background</div>
+        <div class="hidden" id="tour-step2-title">PDF file</div>
+        <div class="hidden" id="tour-step3-title">Result</div>
+        <div class="hidden" id="tour-step4-title">Save</div>
+        <div class="hidden" id="tour-step5-title">PDF Letterhead for macOS</div>
+        <div class="hidden" id="tour-step6-title">Guided tour</div>
+
+        <div class="hidden" id="tour-step1-info">
+          <p>
+          Click here to add a background that is placed behind the PDF file. Allowed file types are jpg, jpeg, jpg, png, pdf, gif.
+          </p>
+        </div>
+
+        <div class="hidden" id="tour-step2-info">
+          <p>
+          Click here to add the PDF file.
+          </p>
+        </div>
+        <div class="hidden" id="tour-step3-info">
+          <p>
+          Once both files have been added, an example of the new PDF file will automatically be shown here.
+          </p>
+        </div>
+        <div class="hidden" id="tour-step4-info">
+          <p>
+          If both files have been added, the new enhanced PDF file can be saved.
+          </p>
+        </div>
+        <div class="hidden" id="tour-step5-info">
+          <p>
+          You get the best user experience with the desktop versions of PDF Letterhead.
+          </p>
+        </div>
+        <div class="hidden" id="tour-step6-info">
+          <p>
+          You can always restart this tour.
+          </p>
+        </div>
+
+        <div class="modal fade" id="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">
+                  Guided tour
+                </h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                PDF Letterhead Online is very easy to use, yet you might want to start a guided tour?
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button class="closetour btn btn-default" data-dismiss="modal">No thanks</button><button autofocus="autofocus" class="btn btn-primary" data-dismiss="modal" id="start">Start the tour</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+
+          <div class="jumbotron hidden show-more">
+            <p>PDF Letterhead works even better as a desktop application. Try PDF Letterhead for macOS now.</p>
+
+            <ul id="downloadmac2" class="text-center list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="/images/download-appstore.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br>PDF Letterhead Lite (gratis)
+              </li>
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="/images/download-appstore.png" alt="download in PDF Letteread Pro App Store" class="app-store-hero" id="Pro"></a><br>PDF Letterhead Pro ($
+                <meta itemprop="priceCurrency" content="USD"><span itemprop="price">4,99</span>)
+              </li>
+            </ul>
+          </div>
+          <h2>PDF with logo and company information</h2>
+
+<p>You want your PDF files to look as if they were printed on your letterhead.</p>
+<p>This is possible. Use PDF Letterhead Online and Your PDFs look like you printed them on your own stationery.</p>
+
+
+<h3>How does PDF Letterhead work?</h3>
+<p>PDF Letterhead Online adds a background to an existing PDF file. Then the
+new PDF file looks as if it were printed on your stationery.
+</p>
+<img src="/images/hoe-werkt-pdf-letterhead.png" alt="How does PDF Letterhead work?" style="width:320px;height:auto;"/>
+
+<p>Use PDF Letterhead to add letterhead to quotes, contracts, letters, and manuals.</p>
+<ul>
+  <li>It's free, it's fast and it's easy</li>
+  <li>Works with Multi-page PDFs</li>
+  <li>Also suitable for non-transparent PDF's</li>
+</ul>
+<br/>
+<br/>
+
+        </div>
+
+        <div class="col-md-8">
+
+          <p class="text-center hidden show-second"><a target="_blank" href="http://pdfletterhead.net">Read all about PDF Letterhead for macOS at pdfletterhead.net.</a></p>
+
+          <div id="appwindow" >
+            <div id="hideresulttips"></div>
+            <div id="spinner" class="ispinner ispinner--gray ispinner--large ispinner--animating">
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+            </div>
+
+
+            <div id="newpdf"><a href="#" onclick="location.reload();" >Opnieuw</a></div>
+            <form enctype="multipart/form-data" id="appform" method="post" action="">
+
+              <div class="coverswitch" id="coverswitch" onclick="alert('In PDF Letterhead Online, cover pages are not supported. Download the Pro version to use this function')">
+              </div>
+
+              <div class="proupgrade" id="proupgrade" onclick="window.open('https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12');">
+              </div>
+
+              <div class="dropzone" id="background">
+                <div></div>
+                <input type="file" name="picture" accept="image/png, application/pdf" />
+                <canvas id="background-canvas"></canvas>
+              </div>
+
+              <div class="dropzone" id="source">
+                <div></div>
+                <input type="file" name="sourcefile" accept="image/png, application/pdf" />
+                <canvas id="source-canvas"></canvas>
+              </div>
+
+              <div id="result">
+                <div></div>
+              </div>
+
+              <div id="buttonbar">
+                <a id="btn_preview">&nbsp;</a>
+                <a id="btn_save" target="_blank" download="letterheaded.pdf">&nbsp;</a>
+              </div>
+
+            </form>
+          </div>
+
+          <div style="margin-left:100px;margin-top:-60px;">
+            <h3>Sample material</h3>
+            Download a <a href="background-letterhead.pdf" download>sample letterhead file</a> and a <a href="textdocument.pdf" download>PDF with sample text</a> to familiarize yourself with PDF Letterhead Online.<a href="achtergrond.pdf" download><img style="height:50px;" src="/images/prevback.png" /></a><a href="tekstdocument.pdf" download><img  style="height:50px;" src="/images/prevdoc.png"/></a>
+            <br/>
+            <br/>
+          </div>
+
+        </div>
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="jumbotron">
+            <h3>PDF Letterhead for macOS</h3>
+            <p>If you like PDF Letterhead Online, download the desktop version as well. With PDF Letterhead for macOS you can work even more efficiently with PDF files on your own computer. You can choose the free Lite version or PDF Letterhead Pro.</p>
+
+            <p><strong><a target="_blank" href="https://itunes.apple.com/app/id1075794517?l=en&mt=12">PDF Letterhead Pro</a></strong> features even more user-friendly functions, including a convenient library that lets you save and use all your stationery backgrounds. </p>
+
+            <ul id="downloadmac" class="text-center list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="/images/iconlite.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br/><br/>
+                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="/images/download-appstore.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br>PDF Letterhead Lite (free)
+              </li>
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="/images/iconpro.png" alt="download PDF Letteread Pro in App Store" class="app-store-hero" id="Pro"></a><br/><br/>
+                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="/images/download-appstore.png" alt="download in PDF Letteread Pro App Store" class="app-store-hero" id="Pro"></a><br>PDF Letterhead Pro ($ <meta itemprop="priceCurrency" content="USD"><span itemprop="price">4,99</span>)
+              </li>
+            </ul>
+            <h3>More information</h3>
+            <p><strong><a target="_blank" href="http://pdfletterhead.net">Read all about PDF Letterhead for macOS at pdfletterhead.net.</a></strong>
+
+          </div>
+
+        </div>
+      </div>
+
+
+        {{- partial "online-footer.html" . -}}
+
+    </div>
+  </body>
+</html>

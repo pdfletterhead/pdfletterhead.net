@@ -1,0 +1,348 @@
+body {
+  font-family             : $base-font-family;
+  color                   : $bodytext;
+  -webkit-font-smoothing  : antialiased;
+  -moz-font-smoothing     : antialiased;
+  -o-font-smoothing       : antialiased;
+}
+
+.page-content {
+  padding : 0;
+}
+
+.wide-center {
+  margin  : 0 auto;
+  float   : none;
+
+  h2 {
+    text-align  : center;
+  }
+}
+
+.features {
+  margin : 0 auto 20px;
+}
+
+.buttons {
+  width: 83.3333333%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.download-button,
+.app-store-matrix{
+  text-align        : center;
+  background-color  : #6abf61;
+  color             : white;
+  line-height       : 38px;
+  font-size         : 14px;
+  margin            : 10px 0 0 10px;
+  transition        : background-color 0.25s ease;
+  text-decoration   : none;
+  text-transform    : uppercase;
+  padding           : 8px 30px;
+  float             : right;
+
+  &:hover {
+    background-color  : #6af166;
+    text-decoration   : none;
+    color             : white;
+  }
+  &:visited {
+    color : white;
+  }
+}
+
+.app-store-hero {
+  margin-bottom: 10px;
+}
+
+.topnav {
+  font-size         : 14px;
+  background-color  : #c00013;
+}
+
+.twitter {
+  font-size: 24px !important;
+}
+
+.star {
+  width   : 127px;
+  height  : 20px;
+}
+
+.navbar-fixed-top {
+  border-bottom-color : #e25b59;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: none;
+}
+
+ul.navbar-right li a{
+  padding-top : 12px;
+  height      : 41px;
+  transition  : background-color 0.25s ease;
+  font-weight : bold;
+}
+
+ul.navbar-right li a:hover{
+  background-color            : #d70015 !important;
+  color                       : white !important;
+  border-bottom-left-radius   : 5px;
+  border-bottom-right-radius  : 5px;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color           : white;
+  text-decoration : underline;
+}
+
+tr.emptyheader {
+  border-top  : 0;
+}
+
+tr.greyheader{
+  background-color  : #8b8c8e;
+  font-size         : 120%;
+  color             : white;
+  line-height       : 40px;
+}
+
+tr {
+  border-top  : solid 1px #d6d7d9;
+}
+
+th.selector {
+  text-align  : center;
+}
+td.device {
+  width       : 140px;
+  height      : 80px;
+  text-align   : center;
+}
+
+.checkmark svg {
+  width : 40px;
+}
+
+.bg-grey {
+  border-bottom : solid 1px #e6e7e9;
+  background    : #f1f1f1;
+}
+
+.bg-white {
+  background-color  : white;
+  border-bottom     : solid 1px #e6e7e9;
+}
+
+.navbar-brand {
+  color       : white !important;
+  font-size   : 20px;
+  line-height : 26px;
+  padding-top : 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-size : 14px;
+  color     : white;
+}
+
+.lead {
+  font-size   : 18px;
+  font-weight : 400;
+}
+
+.intro-header {
+  padding-top       : 42px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom    : 0px;
+  text-align        : center;
+  color             : #f8f8f8;
+  background        : url(../img/logo.png) no-repeat top center;
+  background-color  : #d00013;
+}
+
+.intro-message {
+  position      : relative;
+  padding-top   : 18%;
+  margin-bottom : 0%;
+
+  h1 {
+    margin      : 0;
+    text-shadow : 1px 1px 2px rgba(0,0,0,0.6);
+    font-size   : 5em;
+    color       : white;
+  }
+  h3 {
+    color : white;
+  }
+}
+
+.intro-divider {
+  width         : 400px;
+  border-top    : 1px solid #f8f8f8;
+  border-bottom : 1px solid rgba(0,0,0,0.2);
+  margin        : 20px auto;
+  &--small {
+    width : 200px;
+  }
+}
+
+.intro-message > h3 {
+  text-shadow : 1px 1px 2px rgba(0,0,0,0.6);
+  margin-top  : 0px;
+}
+
+/*.socialbuttonstext*/
+ul.intro-social-buttons {
+  margin-bottom : 5px;
+}
+ul.intro-social-buttons li {
+  margin  : 0px 13px 0px 13px;
+}
+ul.intro-social-buttons li a  {
+  color           : white !important;
+  line-height     : 40px !important;
+  text-decoration : none;
+}
+
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom  : 15%;
+  }
+
+  .intro-message > h1 {
+    font-size : 3em;
+  }
+
+
+  ul.intro-social-buttons > li {
+    display       : block;
+    margin-bottom : 20px;
+    padding       : 0;
+  }
+
+  ul.intro-social-buttons > li:last-child {
+    margin-bottom : 0;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+}
+
+.network-name {
+  text-transform  : uppercase;
+  font-size       : 14px;
+  font-weight     : 400;
+  letter-spacing  : 2px;
+}
+
+.content-section-a {
+  padding           : 50px 0;
+}
+
+.content-section-b {
+  padding       : 50px 0;
+  border-top    : 1px solid #e7e7e7;
+  border-bottom : 1px solid #e7e7e7;
+}
+
+.section-heading {
+  margin-bottom : 30px;
+}
+
+.section-heading-spacer {
+  display       : block;
+  margin-bottom : 20px;
+  width         : 200px;
+  border-top    : 3px solid #e7e7e7;
+}
+.section-heading-spacer-wide {
+  @extend .section-heading-spacer;
+  margin  : 0 auto 20px;
+}
+
+.banner {
+  padding           : 30px 0px 20px 0px;
+  color             : #f8f8f8;
+  background-color  : #d50012;
+
+  h3, h4 {
+    color : white;
+  }
+
+  h2 {
+    margin      : 0;
+    text-shadow : 2px 2px 3px rgba(0,0,0,0.6);
+    font-size   : 3em;
+  }
+
+  ul {
+    margin-bottom : 0;
+  }
+}
+
+.banner-social-buttons {
+  float       : right;
+  margin-top  : 0;
+}
+
+footer {
+  padding           : 10px 0;
+  background-color  : #a80011;
+  text-align        : center;
+  color             : white;
+  font-size         : 13px;
+  line-height       : 12px;
+  margin            : 0;
+
+  ul {
+    margin  : 0;
+    padding : 0;
+  }
+
+  a, a:hover, a:visited {
+    color : white;
+  }
+}
+
+p.copyright {
+  margin      : 5px 0 0;
+  text-align  : center;
+  color       : white;
+}
+
+/* Forms */
+
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #ffffff;
+}
+.has-error .form-control {
+  border-color: #ffffff;
+  color: #fff;
+  background: #e66a6a;
+  font-weight: bold;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.has-error .form-control:focus {
+  border-color: #ffffff;
+  color: #c80011;
+  font-weight: bold;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+}

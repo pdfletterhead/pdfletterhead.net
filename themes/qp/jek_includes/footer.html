@@ -1,0 +1,112 @@
+	<a  name="contact"></a>
+    <div class="banner">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-5 col-sm-5 wide-center support" style="text-align:center">
+                <h3>Support</h3>
+                <hr class="intro-divider intro-divider--small" />
+
+								<form id="contact-form" role="form" xdata-toggle="validator">
+									<input type="hidden" name="bees-love-this" value="yes-they-do">
+									<input type="hidden" name="website" value="{{site.title}}">
+
+									<fieldset class="form-group">
+										<input type="email" class="form-control" name="email-address-sender" required  data-error="Please enter a valid email address." placeholder="E-mail">
+									</fieldset>
+
+									<fieldset class="form-group">
+										<textarea class="form-control" required  name="message" rows="5" placeholder="How can we help?"></textarea>
+									</fieldset>
+
+									<fieldset class="form-group">
+										<select class="form-control" name="form-reason" id="reason">
+											<option value="feedback">Feedback</option>
+											<option value="support">Support</option>
+										</select>
+									</fieldset>
+
+									<button type="submit" class="btn btn-primary" style="background-color:#c80011;border-color:white;" >Submit</button>
+                </form>
+              </div>
+
+              <div class="col-lg-5 col-sm-5 wide-center support" style="text-align:center">
+                <a href="http://munstermade.com" class="external-link" id="MunsterMade"><img src="img/MunsterMade.png" alt="MunsterMade" style="margin-top:60px;width:100px;"/></a>
+              </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                    {% for post in site.posts reversed%}
+                        <li>
+                        <a href="#{{post.menu_title}}" class="footer-nav-link">{{post.menu_title}}</a>
+                        </li>
+                        <li class="footer-menu-divider">|</li>
+                      {% endfor %}
+                        <li>
+                            <a href="#contact" class="footer-nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">{{site.copyright}}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.serialize-hash.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/validator.min.js"></script>
+
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+
+    <script type="text/javascript">
+
+       function sendForm(formID) {
+          jQuery('#'+formID).addClass( jQuery( '#' + formID + ' #reason option:selected').text() );
+          var frmdata = jQuery('#'+formID).serialize();
+          var frmdataHash = jQuery('#'+formID).serializeHash();
+          console.log(frmdataHash);
+          frmdataHash['bees-love-this'] = 'bzzzzz';
+          console.log(frmdataHash);
+
+          if(frmdataHash['bees-love-this'] == 'bzzzzz'){
+            frmdataHash['bees-love-this'] = 'bzzzzzz';
+            var frmdata = JSON.stringify(frmdataHash);
+
+            jQuery('#'+formID).html("Your form is sent. We will contact you as soon as possible");
+
+            jQuery.ajax({
+               url: "https://q6ne7kxjt2.execute-api.eu-west-1.amazonaws.com/prod/",
+               dataType: "json",
+               type: 'POST',
+               data : frmdata,
+               success: function(json) {
+                 jQuery('#'+formID).html("Your feedback has been sent. We will contact you as soon as possible");
+               }
+             });
+          }
+        }
+
+        jQuery( document ).ready(function() {
+          $('#contact-form').validator().on('submit', function (e) {
+              if (e.isDefaultPrevented()) {
+                alert('Please make sure all fields are filled in correctly.');
+              } else {
+                e.preventDefault();
+                sendForm('contact-form');
+              }
+          })
+        });
+    </script>
+    <script src="js/scrollEffect.js"></script>

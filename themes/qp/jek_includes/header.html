@@ -1,0 +1,62 @@
+<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=981929618544549&ev=PageView&noscript=1"/></noscript>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#" class="header-nav-link">{{ site.title }}</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% for post in site.posts reversed%}
+                        <li>
+                        <a href="#{{post.menu_title}}" class="header-nav-link">{{post.menu_title}}</a>
+                        </li>
+                      {% endfor %}
+                        <li><a href="#contact" class="header-nav-link">Support</a></li>
+                        <li><a href="https://twitter.com/PDFLetterhead" class="external-link" id="twitter"><span class="fa fa-twitter twitter"></span></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1 itemprop="name">{{ site.title }}</h1>
+                        <h3 itemprop="description">{{ site.sub_title}}</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons"  itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                            <li>
+                            <a href="{{site.mac_app_store_lite}}"  onClick="ga('send', 'event', 'itunes_header_button', 'PDF Letterhead Lite')"><img src="img/download-appstore.png" alt="download in App Store" class="app-store-hero" id="Lite" /></a><br/>PDF Letterhead Lite (free)
+                            </li>
+                            <li>
+                            <a href="{{site.mac_app_store_pro}}" onClick="ga('send', 'event', 'itunes_header_button', 'PDF Letterhead Pro')"><img src="img/download-appstore.png" alt="download in App Store" class="app-store-hero" id="Pro" /></a><br/>PDF Letterhead Pro ($ 
+                              <meta itemprop="priceCurrency" content="USD" /><span  itemprop="price">4,99</span>)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->

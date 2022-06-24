@@ -1,0 +1,8 @@
+---
+subject: "contactform"
+from: you-have-mail@pogoform.com
+to: website@pdfletterhead.net
+senders_email_field: email-address-sender
+reply_to_sender: true
+redirect_to: /pages/form-sent-page/
+antispam: slide
